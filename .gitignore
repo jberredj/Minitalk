@@ -53,3 +53,4 @@ dkms.conf
 
 _debug*
 .vscode/*
+.vscode
