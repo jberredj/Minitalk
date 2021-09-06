@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:51:54 by jberredj          #+#    #+#             */
-/*   Updated: 2021/08/19 15:03:32 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/08/19 16:29:17 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ int	main(void)
 	sigaction(SIGUSR1, &act, NULL);
 	sigaction(SIGUSR2, &act, NULL);
 	while (1)
-		sleep(1000);
+		pause();
 	return (0);
 }

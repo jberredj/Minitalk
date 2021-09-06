@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 10:38:16 by jberredj          #+#    #+#             */
-/*   Updated: 2021/08/19 15:04:58 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/08/19 16:29:09 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ int	main(int argc, char **argv)
 		return (-1);
 	}
 	while (1)
-		sleep(1000);
+		sleep(1);
 	return (0);
 }
