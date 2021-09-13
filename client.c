@@ -54,7 +54,7 @@ int	send_string(char *str, size_t len, int pid)
 				error = kill(pid, SIGUSR2);
 			if (error)
 				return (-1);
-			usleep(600);
+			usleep(50);
 		}
 	}
 	return (0);
