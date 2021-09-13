@@ -13,6 +13,7 @@
 NAME	=	Minitalk
 
 CC		=	clang
+OPTI	=	-O2
 CFLAGS	=	-Wall -Werror -Wextra
 
 LIBS	=	libft.a
