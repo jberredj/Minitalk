@@ -17,6 +17,17 @@
 #include <signal.h>
 #include <unistd.h>
 
+static int	string_is_nbr(char *str)
+{
+	while (*str)
+	{
+		if (!ft_isdigit(*str))
+			return (0);
+		str++;
+	}
+	return (1);
+}
+
 void	server_all_receive(int sig, siginfo_t *info, void *context)
 {
 	(void)context;
@@ -54,7 +65,7 @@ int	send_string(char *str, size_t len, int pid)
 				error = kill(pid, SIGUSR2);
 			if (error)
 				return (-1);
-			usleep(50);
+			usleep(75);
 		}
 	}
 	return (0);
@@ -68,6 +79,11 @@ int	main(int argc, char **argv)
 	{
 		ft_putendl_fd("Usage :\n ./client [PID] [STRING]", 1);
 		return (0);
+	}
+	if (!string_is_nbr(argv[1]))
+	{
+		ft_putendl_fd("Error.\nPID needs to be unsigned integer.", 2);
+		return (-1);
 	}
 	display_pid();
 	sigemptyset(&act.sa_mask);
